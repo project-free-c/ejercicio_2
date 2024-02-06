@@ -10,8 +10,10 @@ class PaymentMethodController extends AbstractController
 {
     #[Route('/payment/method', name: 'app_payment_method')]
     public function index(): Response
-    {
-        return $this->render('payment_method/index.html.twig');
+    {        
+        return $this->render('payment_method/index.html.twig', [
+            "paymentMethod"     => $this->getParameter("paymentMethod")
+        ]);
     }
 
     #[Route('/payment/method/processing/{method}', name: 'app_payment')]
@@ -23,7 +25,8 @@ class PaymentMethodController extends AbstractController
 
         return $this->render('payment_method/payment.html.twig', [
             "method"    => $method,
-            "total"     => 1000
+            "total"     => $this->getParameter("total"),
+            "urlPayment"=> $this->getParameter("urlPayment")
         ]);
     }
 }

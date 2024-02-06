@@ -1,0 +1,29 @@
+parameters:
+    total           : 1000
+    urlPayment      : "/symphony/ejercicio_2/public/payment"
+    paymentMethod   : [
+        {
+            "name"  : "Mercado pago",
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Mercado pago"
+        },
+        {
+            "name"  : "Transbank",
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Transbank"
+        },
+        {
+            "name"  : "Webpay",
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Webpay"
+        },
+        {
+            "name"  : "Kiphu",
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Kiphu"
+        },
+        {
+            "name"  : "Paypal",
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Paypal"
+        },
+        {
+            "name"  : "Redolcomp",
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Redolcomp"
+        }
+    ]

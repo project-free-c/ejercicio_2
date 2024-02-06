@@ -9,13 +9,12 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PaymentController extends AbstractController
 {
-    #[Route('/payment', name: 'app_payment')]
- 
-    public function processPayment(Request $request, string $paymentType="PayPal"): Response
+    #[Route('/payment', name: 'app_payment_result')]
+    public function processPayment(string $paymentType="PayPal"): Response
     {
-        $totalAmount = 1000; //Modificable
+        $totalAmount = $this->getParameter("total");
 
-        return $this-> render('components/payment/index.html.twig', [
+        return $this->render('payment/index.html.twig', [
             'paymentType' => $paymentType,
             'totalAmount' => $totalAmount,
             'paymentStatus' => 'Pago exitoso' // Agrega lógica para obtener el estado del pago
