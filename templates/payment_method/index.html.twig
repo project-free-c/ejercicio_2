@@ -2,12 +2,12 @@
 
 {% block body %}
 <h1 style="text-align: center;">Seleccione su método de Pago: </h1>
-<main class="container" style="display: flex ;flex-direction: column;align-content: space-around;height: 90vh;/* padding: 3rem; */justify-content: space-around;">
-    <twig:BtnPaymentMethod paymentMethod="WebPay" />
-    <twig:BtnPaymentMethod paymentMethod="Mercado Pago" />
-    <twig:BtnPaymentMethod paymentMethod="Pay Pal" />
-    <twig:BtnPaymentMethod paymentMethod="RedelCom" />
-    <twig:BtnPaymentMethod paymentMethod="Khipu" />
+<main class="container" style="flex-direction: column;align-content: space-around;height: 90vh;justify-content: space-around;">
+    <twig:BtnPaymentMethod children="WebPay" />
+    <twig:BtnPaymentMethod children="Mercado Pago" />
+    <twig:BtnPaymentMethod children="Pay Pal" />
+    <twig:BtnPaymentMethod children="RedelCom" />
+    <twig:BtnPaymentMethod children="Khipu" />
 </main>
 
 {% endblock %}

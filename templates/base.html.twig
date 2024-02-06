@@ -5,6 +5,67 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
+
+            <style>
+
+                html{
+                    font-family: sans-serif;
+                }
+
+                .container {
+                    padding: 2rem; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }
+                                
+                .a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;    
+                    width: 200px;
+                    height: 60px;
+                    color: #fff;
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    text-decoration: none;                    
+                    margin: 10px; /* Ajusta el margen entre los botones */
+                    background: linear-gradient(90deg, #5bcedf, #f96161, #fc8f46, #36e494);
+                    background-size: 400%;
+                    border-radius: 30px;    
+                }
+
+                .a:hover{
+                    animation: animate 8s linear infinite;
+                }
+
+                .a:before{
+                    padding:1rem;    
+                    background: linear-gradient(90deg,#5bcedf, #f96161, #fc8f46, #36e494);
+                    background-size: 400px;
+                    border-radius: 40px;
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+
+                .a:hover:before{
+                    filter: blur(10px);
+                    opacity: 1;
+                }
+
+                @keyframes animate {
+                    0%{
+                        background-position: 0%;
+                    }
+                    100%{
+                        background-position: 400%;
+                    }
+                }
+
+            </style>
+
         {% endblock %}
     </head>
     <body>

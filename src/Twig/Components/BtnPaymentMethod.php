@@ -10,6 +10,6 @@ use Symfony\UX\LiveComponent\DefaultActionTrait;
 #[AsLiveComponent]
 final class BtnPaymentMethod
 {
-    public string $paymentMethod;
+    public string $children;
     use DefaultActionTrait;
 }

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1 style="text-align: center;">Metodo de pago: {{method}}</h1>
+<main style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <twig:lblTotal total="{{total}}" />
+    <div class="container" style="width: 100%; justify-content: center; height: 150px">
+        <twig:BtnPaymentMethod children="pagar"/>
+    </div>
+</main>
+
+{% endblock %}
