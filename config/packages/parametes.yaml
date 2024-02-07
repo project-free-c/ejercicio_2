@@ -1,29 +1,35 @@
 parameters:
     total           : 1000
-    urlPayment      : "/symphony/ejercicio_2/public/payment"
+    urlPayment      : "/symphony/ejercicio_2/public/payment/result"
     paymentMethod   : [
         {
             "name"  : "Mercado pago",
-            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Mercado pago"
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Mercado pago",
+            "class" : "MercadoPago"
         },
         {
             "name"  : "Transbank",
-            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Transbank"
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Transbank",
+            "class" : "Transbrank"
         },
         {
             "name"  : "Webpay",
-            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Webpay"
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Webpay",
+            "class" : "WebPay"
         },
         {
             "name"  : "Kiphu",
-            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Kiphu"
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Kiphu",
+            "class" : "khipu"
         },
         {
             "name"  : "Paypal",
-            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Paypal"
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Paypal",
+            "class" : "RedolCom"
         },
         {
             "name"  : "Redolcomp",
-            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Redolcomp"
+            "href"  : "/symphony/ejercicio_2/public/payment/method/processing/Redolcomp",
+            "class" : "RedolCom"
         }
     ]

@@ -2,9 +2,9 @@
 
 namespace App\Model;
 
-class  Khyp
+class Khipu
 {
-    private ?string $method = "khyp";
+    private ?string $method = "khipu";
 
     public function getMethod(): ?string
     {
