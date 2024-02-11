@@ -2,9 +2,9 @@
 
 namespace App\Model;
 
-class WebPay
+class RedolCom
 {
-    private ?string $method = "webPay";
+    private ?string $method = "redolCom";
 
     public function getMethod(): ?string
     {
